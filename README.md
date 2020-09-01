@@ -1,6 +1,14 @@
 # MacOSにて、構築ガイドライン
 ## 環境構築
-* graphvizインストール
-    * この[リンク](http://www.graphviz.org/download/)でダウンロードして、インストールする
+> 前提条件：Java8以上がインストールされたこと
 
-## Script
+* この[リンク](http://www.graphviz.org/download/)でgraphvizをダウンロードして、インストールする
+* 環境構築ツールをチェクアウトする
+    ```
+    git clone git@github.com:bravesoft-sinh/bsschema.git
+    ```
+* チェックアウトした`bschema`フォルダに移動して、`run.sh`に実行権限を追加する
+    ```
+    chmod +x run.sh
+    ```
+* 
