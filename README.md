@@ -30,6 +30,6 @@
     * [-imageformat outputImageFormat] → 出力される画像のフォーマット
        * svg: ```-imageformat svg```
        
-    その他のコマンドラインはこの[リンク](https://schemaspy.readthedocs.io/en/latest/configuration/commandline.html#commandline) で参考になる
+    その他のパラメータはこの[リンク](https://schemaspy.readthedocs.io/en/latest/configuration/commandline.html#commandline) で参考になる
 
 * 上記のコマンドを実行してから、指定した出力フォルダーをOTAへアップロードする
