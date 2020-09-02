@@ -8,28 +8,43 @@
 * この[リンク](https://github.com/schemaspy/schemaspy/releases) で`schemaspy`をダウンロードして、インストールする
 * ダウンロードの後、以下のコマンドを実行する
     ```
-    java -jar schemaspy.jar -t dbType -dp C:/sqljdbc4-3.0.jar -db dbName -host server -port 1433 [-s schema] -u user [-p password] -o outputDir
+    java -jar schemaspy.jar -configFile path/to/config.file
+    ```
+    設定ファイルサンプル：
+    ```
+    # type of database. Run with -dbhelp for details
+    schemaspy.t=mysql
+    # database host
+    schemaspy.host=localhost
+    #database port
+    schemaspy.port=3306
+    # database
+    schemaspy.db=test
+    # database user
+    schemaspy.u=root
+    #database password
+    schemaspy.p=root
+    # database shcema
+    schemaspy.s=test
+    
+    # output folder
+    schemaspy.o = documents
     ```
     パラメーターの説明：
-    * [-t databaseType] → データベース種類
+    * [schemaspy.t] → データベース種類
         * MySQL：```mysql```
         * MSSQL：```sql```
         * Oracle：```ora```
-    * [-db dbName] → データベース名
-    * [-u user] → データベースユーザー名
-    * [-s schema] → データベーススキーマ
-    * [-p password] → データベースパスワード
-    * [-port databaseport] → データベースのポート
+    * [schemaspy.db] → データベース名
+    * [schemaspy.u] → データベースユーザー名
+    * [schemaspy.s] → データベーススキーマ
+    * [schemaspy.p] → データベースパスワード
+    * [schemaspy.port] → データベースのポート
         * MySQL：3306
-    * [-o outputDirectory] → アウトプットファイルの格納フォルダ
+    * [schemaspy.o] → アウトプットファイルの格納フォルダ
         * このフォルダを使って、OTAへアップロードする
-    * [-dp pathToDrivers] →　データベース接続ドライバー
-    * [-hq] or [-lq] → ダイアグラムの画質。
-        * hq：高い画質
-        * lq：低い画質
-    * [-imageformat outputImageFormat] → 出力される画像のフォーマット
-       * svg: ```-imageformat svg```
        
     その他のパラメータはこの[リンク](https://schemaspy.readthedocs.io/en/latest/configuration/commandline.html#commandline) で参考になる
 
 * 上記のコマンドを実行してから、指定した出力フォルダーをOTAへアップロードする
+
